@@ -1,0 +1,106 @@
+.chat-bubble {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #f195b2;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Asegura que la burbuja esté por encima del contenido */
+}
+.chat-bubble:hover {
+    background-color: #FF407C;
+}
+.chat-bubble-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 80%; /* Cambiado de 400px a 80% */
+    max-width: 320px; /* Máximo ancho para evitar que se extienda demasiado */
+    max-height: 80vh; /* Máxima altura relativa al viewport */
+    display: none;
+    z-index: 999;
+}
+.chat-header {
+    background-color: #f195b2;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative; /* Posición relativa para el icono de cerrar */
+}
+.chat-header .close-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.chat-body {
+    padding: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    max-width: 70%;
+}
+.user-message {
+    background-color: #f195b2;
+    color: #fff;
+    float: right;
+}
+.bot-message {
+    background-color: #f0f0f0;
+    color: #555;
+    float: left;
+}
+.input-container {
+    display: flex;
+    margin-top: 10px;
+    padding: 0 20px 20px;
+}
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#send-btn {
+    background-color: #f195b2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+#send-btn:hover {
+    background-color: #FF407C;
+}
